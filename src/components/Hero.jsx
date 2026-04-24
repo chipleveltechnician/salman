@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Cpu, Zap, Activity } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -72,7 +73,7 @@ const Hero = () => {
             <div className="absolute inset-0 rounded-full border-2 border-circuit-blue shadow-neon animate-[spin_10s_linear_infinite]"></div>
             <div className="absolute inset-2 rounded-full border border-neon-accent shadow-[0_0_15px_rgba(0,255,204,0.3)] animate-[spin_15s_linear_infinite_reverse]"></div>
             <img 
-              src="/profile.png" 
+              src={profileImg} 
               alt="Salmanul Faris M S" 
               className="absolute inset-4 w-[calc(100%-32px)] h-[calc(100%-32px)] object-cover rounded-full z-10 filter brightness-110 contrast-125"
             />

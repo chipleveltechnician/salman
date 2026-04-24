@@ -48,9 +48,10 @@ const Experience = () => {
               </div>
 
               <p className="text-gray-300 leading-relaxed mb-4">
-                Operating at the intersection of hardware and logic. Specializing in diagnosing 
-                complex motherboard failures, executing precision micro-soldering repairs, and 
-                deploying robust OS environments for enterprise and consumer systems.
+                Experienced Technician specializing in hardware diagnostics and comprehensive device servicing.
+                 Expert in identifying and clearing motherboard shorts, troubleshooting complex charging issues,
+                 and performing precision hardware replacements including displays, keyboards, and batteries. 
+                  Focused on delivering high-quality repair solutions to restore optimal system functionality for consumer electronics
               </p>
 
               <div className="flex flex-wrap gap-2 md:justify-end">

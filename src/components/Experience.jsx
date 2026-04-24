@@ -45,8 +45,9 @@ const Experience = () => {
                   href="https://maps.app.goo.gl/PfCxTFDqtKCgPMoL6" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="hover:text-circuit-blue hover:underline transition-colors"
+                  className="inline-flex items-center gap-2 hover:text-circuit-blue hover:underline transition-colors"
                 >
+                  <MapPin size={20} />
                   Hypertech Digital
                 </a>
               </h4>

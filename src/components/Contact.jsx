@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Send, Code, Users, Mail, Wrench, Phone, MessageCircle } from 'lucide-react';
+import { Terminal, Send, Mail, Wrench, Phone, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({ 
@@ -223,21 +223,21 @@ const Contact = () => {
           className="lg:w-1/3 flex flex-col justify-center gap-8"
         >
           <div className="glass-panel p-6 flex items-start gap-4 hover:border-circuit-blue/50 transition-colors group cursor-pointer">
-             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-circuit-blue text-circuit-blue">
+             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-circuit-blue text-circuit-blue flex-shrink-0">
                 <Mail size={24} />
              </div>
-             <div>
+             <div className="min-w-0">
                 <h4 className="text-sm font-mono text-gray-400 mb-1">Direct Line</h4>
-                <a href="mailto:salmanulfaris3116@gmail.com" className="text-lg font-bold group-hover:text-circuit-blue transition-colors">salmanulfaris3116@gmail.com</a>
+                <a href="mailto:salmanulfaris3116@gmail.com" className="text-base font-bold group-hover:text-circuit-blue transition-colors break-all leading-snug">salmanulfaris3116@gmail.com</a>
              </div>
           </div>
 
           {/* Phone / WhatsApp */}
           <div className="glass-panel p-6 flex items-start gap-4 hover:border-green-400/50 transition-colors group cursor-pointer">
-             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-green-400 text-green-400">
+             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-green-400 text-green-400 flex-shrink-0">
                 <Phone size={24} />
              </div>
-             <div>
+             <div className="min-w-0">
                 <h4 className="text-sm font-mono text-gray-400 mb-1">Phone</h4>
                 <a href="tel:+917025137538" className="text-lg font-bold group-hover:text-green-400 transition-colors">+91 7025137538</a>
              </div>
@@ -250,34 +250,14 @@ const Contact = () => {
             rel="noopener noreferrer"
             className="glass-panel p-6 flex items-center gap-4 hover:border-green-500/60 transition-colors group cursor-pointer no-underline"
           >
-             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-green-500 text-green-500">
+             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-green-500 text-green-500 flex-shrink-0">
                 <MessageCircle size={24} />
              </div>
-             <div>
+             <div className="min-w-0">
                 <h4 className="text-sm font-mono text-gray-400 mb-1">WhatsApp</h4>
                 <span className="text-lg font-bold text-white group-hover:text-green-500 transition-colors">Message on WhatsApp</span>
              </div>
           </a>
-
-          <div className="glass-panel p-6 flex items-start gap-4 hover:border-neon-accent/50 transition-colors group cursor-pointer">
-             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-neon-accent text-neon-accent">
-                <Users size={24} />
-             </div>
-             <div>
-                <h4 className="text-sm font-mono text-gray-400 mb-1">Professional Network</h4>
-                <a href="#" className="text-lg font-bold group-hover:text-neon-accent transition-colors">LinkedIn Profile</a>
-             </div>
-          </div>
-
-          <div className="glass-panel p-6 flex items-start gap-4 hover:border-gray-400 transition-colors group cursor-pointer">
-             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-white text-white">
-                <Code size={24} />
-             </div>
-             <div>
-                <h4 className="text-sm font-mono text-gray-400 mb-1">Code Repository</h4>
-                <a href="#" className="text-lg font-bold group-hover:text-white transition-colors">GitHub Profile</a>
-             </div>
-          </div>
         </motion.div>
 
       </div>

@@ -15,16 +15,45 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate network request
-    setTimeout(() => {
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "b6dfaf41-f8d7-4946-bb16-7a55884d07aa",
+          subject: `New Transmission from ${formState.name} - ${formState.type} Inquiry`,
+          name: formState.name,
+          email: formState.email,
+          type: formState.type,
+          message: formState.message,
+          deviceModel: formState.deviceModel,
+          issueDescription: formState.issueDescription,
+        }),
+      });
+
+      const result = await response.json();
+      
+      if (result.success) {
+        setIsSuccess(true);
+        setFormState({ name: '', email: '', message: '', type: 'general', deviceModel: '', issueDescription: '' });
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        console.error("Submission failed", result);
+        alert("Transmission failed. Please verify your connection and try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting form", error);
+      alert("Transmission error. Please try again.");
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      setFormState({ name: '', email: '', message: '', type: 'general', deviceModel: '', issueDescription: '' });
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    }
   };
 
   return (

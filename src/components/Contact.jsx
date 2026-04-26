@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Send, Mail, Wrench, Phone, MessageCircle, Instagram } from 'lucide-react';
+import { Terminal, Send, Mail, Wrench, Phone, MessageCircle } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({ 
@@ -267,7 +267,21 @@ const Contact = () => {
             className="glass-panel p-6 flex items-center gap-4 hover:border-pink-500/60 transition-colors group cursor-pointer no-underline"
           >
              <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-pink-500 text-pink-500 flex-shrink-0">
-                <Instagram size={24} />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                  <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                </svg>
              </div>
              <div className="min-w-0">
                 <h4 className="text-sm font-mono text-gray-400 mb-1">Instagram</h4>

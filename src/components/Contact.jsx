@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Send, Mail, Wrench, Phone, MessageCircle } from 'lucide-react';
+import { Terminal, Send, Mail, Wrench, Phone, MessageCircle, Instagram } from 'lucide-react';
 
 const Contact = () => {
   const [formState, setFormState] = useState({ 
@@ -222,18 +222,18 @@ const Contact = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="lg:w-1/3 flex flex-col justify-center gap-8"
         >
-          <div className="glass-panel p-6 flex items-start gap-4 hover:border-circuit-blue/50 transition-colors group cursor-pointer">
+          <div className="glass-panel p-6 flex items-center gap-4 hover:border-circuit-blue/50 transition-colors group cursor-pointer">
              <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-circuit-blue text-circuit-blue flex-shrink-0">
                 <Mail size={24} />
              </div>
              <div className="min-w-0">
                 <h4 className="text-sm font-mono text-gray-400 mb-1">Direct Line</h4>
-                <a href="mailto:salmanulfaris3116@gmail.com" className="text-base font-bold group-hover:text-circuit-blue transition-colors break-all leading-snug">salmanulfaris3116@gmail.com</a>
+                <a href="mailto:salmanulfaris3116@gmail.com" className="text-base font-bold group-hover:text-circuit-blue transition-colors break-words leading-snug">salmanulfaris3116@gmail.com</a>
              </div>
           </div>
 
           {/* Phone / WhatsApp */}
-          <div className="glass-panel p-6 flex items-start gap-4 hover:border-green-400/50 transition-colors group cursor-pointer">
+          <div className="glass-panel p-6 flex items-center gap-4 hover:border-green-400/50 transition-colors group cursor-pointer">
              <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-green-400 text-green-400 flex-shrink-0">
                 <Phone size={24} />
              </div>
@@ -256,6 +256,22 @@ const Contact = () => {
              <div className="min-w-0">
                 <h4 className="text-sm font-mono text-gray-400 mb-1">WhatsApp</h4>
                 <span className="text-lg font-bold text-white group-hover:text-green-500 transition-colors">Message on WhatsApp</span>
+             </div>
+          </a>
+
+          {/* Instagram */}
+          <a
+            href="https://www.instagram.com/salmanul_faris_m_s/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="glass-panel p-6 flex items-center gap-4 hover:border-pink-500/60 transition-colors group cursor-pointer no-underline"
+          >
+             <div className="p-3 bg-black/50 rounded border border-gray-800 group-hover:border-pink-500 text-pink-500 flex-shrink-0">
+                <Instagram size={24} />
+             </div>
+             <div className="min-w-0">
+                <h4 className="text-sm font-mono text-gray-400 mb-1">Instagram</h4>
+                <span className="text-lg font-bold text-white group-hover:text-pink-500 transition-colors">Follow the Feed</span>
              </div>
           </a>
         </motion.div>

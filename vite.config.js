@@ -8,5 +8,17 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: '/salman/', // For GitHub Pages deployment
+ import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+  base: '/', // Changed from '/salman/' to '/' for Vercel
+})
+
 })
